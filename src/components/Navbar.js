@@ -17,7 +17,7 @@ class Navbar extends HTMLElement {
             }
         ]
     }
-    
+
     connectedCallback() {
         this.active = this.getAttribute("active")
         this.render()
@@ -25,9 +25,9 @@ class Navbar extends HTMLElement {
 
     handleNav() {
         document.querySelector(".menu").classList.toggle("active")
-        if(this.classList.contains("active")) {
+        if (this.classList.contains("active")) {
             return this.classList.remove("active")
-        } 
+        }
         this.classList.add("active")
     }
 
@@ -38,12 +38,12 @@ class Navbar extends HTMLElement {
                     <h1>Wahyudi</h1>
                     <ul>
                         ${this.navs.map(nav => (
-                            `<li>
+            `<li>
                                 <a 
                                 class="${this.active == nav.name && 'active'}"
                                 data-link="${nav.path}">${nav.name}</a>
                             </li>`
-                        )).join("")}
+        )).join("")}
                     </ul>
                 </div>
             </nav>
@@ -60,16 +60,16 @@ class Navbar extends HTMLElement {
             <div class="menu">
                 <ul>
                     ${this.navs.map(nav => (
-                        `<li><a 
+            `<li><a 
                                 class="${this.active == nav.name && 'active'}"
                                 data-link="${nav.path}">${nav.name}
                             </a>
                         </li>`
-                    )).join("")}
+        )).join("")}
                 </ul>
             </div>
         `
-        
+
         this.querySelector(".hamburger").addEventListener("click", this.handleNav)
     }
 
