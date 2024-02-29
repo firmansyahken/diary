@@ -5,7 +5,7 @@ class Navbar extends HTMLElement {
         this.navs = [
             {
                 name: "Home",
-                path: "https://firmansyahken.github.io/diary"
+                path: "https://firmansyahken.github.io/diary/"
             },
             {
                 name: "Blog",
